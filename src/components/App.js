@@ -1,5 +1,8 @@
 import React from 'react';
-import './App.css';
+// import './App.css';
+import MessageList from './MessageList';
+import Title from './Title';
+import SendMessageForm from './SendMessageForm';
 
 const DUMMY_DATA = [
   {
