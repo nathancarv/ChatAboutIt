@@ -1,8 +1,8 @@
-import React from 'react';
+import React from "react";
 // import './App.css';
-import MessageList from './MessageList';
-import Title from './Title';
-import SendMessageForm from './SendMessageForm';
+import MessageList from "./MessageList";
+import Title from "./Title";
+import SendMessageForm from "./SendMessageForm";
 
 const DUMMY_DATA = [
   {
@@ -13,23 +13,23 @@ const DUMMY_DATA = [
     senderId: "janedoe",
     text: "who'll win?"
   }
-]
+];
 
 class App extends React.Component {
   constructor() {
-    super()
+    super();
     this.state = {
-       messages: DUMMY_DATA
-    }
+      messages: DUMMY_DATA
+    };
   }
   render() {
     return (
       <div className="app">
         <Title />
-        <MessageList messages={this.state.messages}/>
+        <MessageList messages={this.state.messages} />
         <SendMessageForm />
-     </div>
-    )
+      </div>
+    );
   }
 }
 
