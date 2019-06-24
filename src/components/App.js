@@ -15,6 +15,15 @@ const DUMMY_DATA = [
   }
 ];
 
+componentDidMount() {
+  const chatManager = new Chatkit.ChatManager({
+    instanceLocator: instanceLocator,
+    userId: userId,
+    tokenProvider: new Chatkit.TokenProvider({
+      url: testToken
+    })
+ })  
+
 class App extends React.Component {
   constructor() {
     super();
