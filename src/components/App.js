@@ -10,16 +10,16 @@ const roomId = 24140849
 const username = 'NateTheDeveloper'
 
 
-const DUMMY_DATA = [
-  {
-    senderId: "perborgen",
-    text: "who'll win?"
-  },
-  {
-    senderId: "janedoe",
-    text: "who'll win?"
-  }
-];
+// const DUMMY_DATA = [
+//   {
+//     senderId: "perborgen",
+//     text: "who'll win?"
+//   },
+//   {
+//     senderId: "janedoe",
+//     text: "who'll win?"
+//   }
+// ];
 
 componentDidMount() {
   const chatManager = new Chatkit.ChatManager({
@@ -28,7 +28,20 @@ componentDidMount() {
     tokenProvider: new Chatkit.TokenProvider({
       url: testToken
     })
- })  
+    chatManager.connect().then(currentUser => {
+      currentUser.subscribeToRoom({
+      roomId: roomId,
+      hooks: {
+        onNewMessage: message => {
+          this.setState({
+            messages: [...this.state.messages, message]
+          })
+        }
+      }
+    })
+}
+}
+}
 
 class App extends React.Component {
   constructor() {
