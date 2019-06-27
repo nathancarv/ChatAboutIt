@@ -4,6 +4,12 @@ import MessageList from "./MessageList";
 import Title from "./Title";
 import SendMessageForm from "./SendMessageForm";
 
+const testToken = "https://us1.pusherplatform.io/services/chatkit_token_provider/v1/9cb2544c-e898-43a4-9679-26295cd145ca/token"
+const instanceLocator = "v1:us1:9cb2544c-e898-43a4-9679-26295cd145ca"
+const roomId = 24140849
+const username = 'NateTheDeveloper'
+
+
 const DUMMY_DATA = [
   {
     senderId: "perborgen",
